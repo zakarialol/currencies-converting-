@@ -1,0 +1,108 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+:root{
+    --font-s-x-large: x-large;
+    --font-size-larger:large;
+    --first-color: #BC4749;
+    --second-color:#386641;
+    --third-color: white;
+    --forth-color:#6A994E;
+    --medium-padding: 20px;
+    --br-5px: 5px;
+    --medium-font-size: 1.8rem;
+    --margin-medium:20px;
+    --font-franklin:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --small-height: 40px;
+    --medium-height: 45px;
+    --balck-color:black;
+}
+body{
+    background: var(--first-color);
+    height: 100vh;
+    height: 100dvh;
+    align-content: center;
+}
+main{
+    background: var(--third-color);
+    margin: 0 auto;
+    max-width: 430px;
+    padding: var(--medium-padding);
+    border-radius: var(--br-5px);
+}
+.title{
+    font-weight: bold;
+    font-size: var(--medium-font-size);
+    text-align: center;
+    font-family:var(--font-franklin);
+    letter-spacing: 1px;
+    margin:var(--margin-medium) 0px;
+}
+.lbl-amount{
+    display: block;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#amount-input{
+    width: 100%;
+    min-height: var(--medium-height);
+    padding: 5px;
+    border: none;
+    border-bottom: solid var(--second-color) 3px;
+    outline: none;
+    font-size: var(--font-s-xx-large);
+}
+.convertingDiv{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.convertingAndResultHolder{
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-medium);
+    margin-top: var(--margin-medium);
+}
+#selectOne,#selectTwo{
+    min-width: 160px;
+    height: var(--small-height);
+    color: var(--third-color);
+    background: var(--second-color);
+    font-size: var(--font-s-xx-large);
+    cursor: pointer;
+}
+#convertBtn{
+    height: var(--medium-height);
+    color: var(--third-color);
+    background: var(--second-color);
+    font-size: var(--font-s-xx-large);
+    border: none;
+    cursor: pointer;
+}
+.result{
+    background: var(--forth-color);
+    height: var(--medium-height);
+    color: var(--balck-color);
+}
+.imgHolder{
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+.imgHolder img{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    object-fit: contain;
+}
+.convertingDiv label{
+    text-transform: capitalize;
+    font-weight: bold;
+    display: block;
+    margin: 2px 0px;
+}
