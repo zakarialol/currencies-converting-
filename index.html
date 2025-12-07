@@ -15,8 +15,11 @@
             <p class="title">currency converter</p>
         </div>
         <div>
-            <label for="amount" class="lbl-amount">amount</label>
-            <input type="text" id="amount-input">
+            <label for="amount" class="lbl-amount" id="amountInput">amount</label>
+            <input type="text" id="amount-input" placeholder="type a number">
+        </div>
+        <div class="errMsgHolder" id="errMsgHolder">
+            <p class="errTextHolder">hello world</p>
         </div>
         <div class="convertingAndResultHolder">
             <div class="convertingDiv">
@@ -32,7 +35,7 @@
                 </div>
             </div>
             <button id="convertBtn">convert</button>
-        <div class="result"></div>
+        <div class="result" id="finalResult"></div>
         </div>
     </main>
     <script src="corrency-convert.js"></script>
