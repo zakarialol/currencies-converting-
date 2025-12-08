@@ -8,7 +8,7 @@ const errMsgHolder = document.getElementById('errMsgHolder')
 const errTextHolder = document.querySelector('#errMsgHolder .errTextHolder ')
 //
 //onload function function
-window.onload = selectsContentFunc()
+window.onload = selectsContentFunc
 function selectsContentFunc(){
     let currenciesKeysUrl ='https://api.frankfurter.dev/v1/currencies'
     fetch(currenciesKeysUrl).then(result => {
@@ -44,7 +44,8 @@ function convertFunc(){
     convertBtn.disabled = true
     let selectOneValue = selectOne.value.trim()
     let selectTwoValue = selectTwo.value.trim()
-    let convertingUrl = `https://api.frankfurter.dev/v1/1999-01-04?base=${selectOneValue}&symbols=${selectTwoValue}`
+    let convertingUrl =   `https://api.frankfurter.dev/v1/latest?base=${selectOneValue}&symbols=${selectTwoValue}`;
+
     fetch(convertingUrl).then(result =>{
             if(!result.ok) {
                 return result.json().then(err=>{

@@ -121,3 +121,21 @@ main{
     font-size: var(--font-s-x-large);
     color: var(--third-color);
 }
+/* queries form small screen */
+@media(max-width:420px){
+    :root{
+        --medium-padding:3px;
+        --small-height:25px;
+        --medium-height:35px;
+        --medium-font-size: 1.2rem;
+    }
+    main{
+        width: 90%;
+    }
+    .convertingDiv{
+        gap: 3px;
+    }
+    #selectOne,#selectTwo{
+        min-width: 100px;
+    }
+}
