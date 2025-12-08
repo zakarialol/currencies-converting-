@@ -52,7 +52,7 @@ function convertFunc(){
                         throw new Error(`can't convert this currency to ${selectTwo.value.trim().toLowerCase()}`)
                     }
                     if(err.message === 'bad currency pair'){
-                        throw new Error("change converted currency")
+                        throw new Error("can't change to same currency")
                     }
                     throw new Error(result.message||"semething went wrong")
                 })
@@ -86,7 +86,7 @@ function showFinalRsultFunc(result){
     // calculation of the rsult 
         let calcletedRsult = inputValue.value.trim() * Object.values(result.rates)[0]
     // appending rsult to the dom
-        finalResult.innerHTML = `<p>${calcletedRsult}</p>`
+        finalResult.innerHTML = `<p>${calcletedRsult.toFixed(2)}</p>`
 }
 // handling input value here 
 function handleInputFunc(){
